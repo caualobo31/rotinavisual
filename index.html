@@ -1006,7 +1006,7 @@
   <h1>Comunicação Visual + Rotina + Atividades para Crianças com <span>Autismo e Atraso de Fala</span></h1>
   <img src="fotos/hero.png" alt="Kit Comunicação e Rotina Visual" class="hero-img">
   <p class="hero-sub">Material desenvolvido para ajudar crianças com autismo, TDAH e dificuldades de comunicação a se expressarem melhor e compreenderem sua rotina diária.</p>
-  <a href="#LINK_CHECKOUT" class="hero-cta">QUERO MEU KIT AGORA →</a>
+  <a href="#planos" class="hero-cta">QUERO MEU KIT AGORA →</a>
   <div class="hero-trust">
     <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
     Pagamento seguro • Acesso imediato
@@ -1238,7 +1238,7 @@
       <div class="plan-feature">✅ Acesso imediato</div>
     </div>
 
-    <a href="#LINK_CHECKOUT_BASICO" class="plan-btn plan-btn-basic">QUERO O KIT BÁSICO</a>
+    <a href="https://pay.wiapy.com/69e66f0591fb6aa98d075991" class="plan-btn plan-btn-basic">QUERO O KIT BÁSICO</a>
 
     <div class="plan-trust">🔒 Compra Segura &nbsp;•&nbsp; 🛡️ Garantia 15 dias &nbsp;•&nbsp; ⚡ Acesso Imediato</div>
   </div>
@@ -1272,7 +1272,7 @@
       <div class="plan-bonus-item">🎁 Manual Prático do Autismo</div>
     </div>
 
-    <a href="#LINK_CHECKOUT_COMPLETO" class="plan-btn plan-btn-featured">QUERO O KIT COMPLETO</a>
+    <a href="https://pay.wiapy.com/69e66e8191fb6aa98d0731b5" class="plan-btn plan-btn-featured">QUERO O KIT COMPLETO</a>
 
     <div class="plan-trust">🔒 Compra Segura &nbsp;•&nbsp; 🛡️ Garantia 15 dias &nbsp;•&nbsp; ⚡ Acesso Imediato</div>
   </div>
@@ -1318,7 +1318,7 @@
 <section class="final-cta">
   <h2>A rotina da sua criança pode mudar hoje.</h2>
   <p>Pare de improvisar. Tenha materiais prontos, bonitos e que funcionam de verdade.</p>
-  <a href="#LINK_CHECKOUT_COMPLETO" class="cta-btn">QUERO MEU KIT COMPLETO POR R$ 27 →</a>
+  <a href="https://pay.wiapy.com/69e66e8191fb6aa98d0731b5" class="cta-btn">QUERO MEU KIT COMPLETO POR R$ 27 →</a>
   <div class="trust-line">
     <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
     Pagamento seguro • Acesso imediato • Garantia 15 dias
@@ -1369,6 +1369,26 @@
       q.nextElementSibling.classList.toggle('open');
     });
   });
+
+  // UTM passthrough — appenda parâmetros UTM da URL atual em todos os links de checkout
+  (function() {
+    const utmKeys = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content'];
+    const params = new URLSearchParams(window.location.search);
+    const utmParams = new URLSearchParams();
+    utmKeys.forEach(k => { if (params.has(k)) utmParams.set(k, params.get(k)); });
+    if (!utmParams.toString()) return;
+
+    const checkoutDomains = ['pay.wiapy.com'];
+    document.querySelectorAll('a[href]').forEach(a => {
+      try {
+        const url = new URL(a.href);
+        if (checkoutDomains.some(d => url.hostname.includes(d))) {
+          utmParams.forEach((v, k) => url.searchParams.set(k, v));
+          a.href = url.toString();
+        }
+      } catch(e) {}
+    });
+  })();
 </script>
 
 </body>
