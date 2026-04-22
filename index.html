@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Kit Comunicação e Rotina Visual</title>
+<title>Kit Comunicação e Rotina Visual — Estimula a Fala Todos os Dias</title>
+
+<!-- TikTok Pixel -->
 <script>
   window.tikTokPixelId = "69e67426e38cc01fc47c0e15";
   var a = document.createElement("script");
@@ -12,6 +14,8 @@
   a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel-tiktok.js");
   document.head.appendChild(a);
 </script>
+
+<!-- Utmify -->
 <script
   src="https://cdn.utmify.com.br/scripts/utms/latest.js"
   data-utmify-prevent-xcod-sck
@@ -19,1025 +23,878 @@
   async
   defer
 ></script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-  :root {
-    --blue: #4361EE;
-    --blue-dark: #3A56D4;
-    --blue-light: #EEF1FF;
-    --blue-bg: #F5F7FF;
-    --purple: #7B2FF2;
-    --purple-light: #F3EEFF;
-    --coral: #FF6B6B;
-    --green: #25D366;
-    --green-hover: #1EBF5A;
-    --orange: #FF9F43;
-    --cream: #FFF8F0;
-    --white: #FFFFFF;
-    --bg: #FAFBFF;
-    --text: #2B2D42;
-    --text-light: #6C6F85;
-    --text-muted: #9B9DB5;
-    --border: #E8EAF2;
-    --shadow-sm: 0 2px 8px rgba(67,97,238,0.06);
-    --shadow-md: 0 4px 20px rgba(67,97,238,0.1);
-    --radius: 16px;
-    --radius-sm: 12px;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
-
-  body {
-    font-family: 'Nunito', sans-serif;
-    color: var(--text);
-    background: var(--bg);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
-    -webkit-text-size-adjust: 100%;
-  }
-
-  /* ===== URGENCY BAR ===== */
-  .urgency-bar {
-    background: linear-gradient(90deg, var(--blue) 0%, var(--purple) 100%);
-    color: #fff;
-    text-align: center;
-    padding: 10px 16px;
-    font-size: 13px;
-    font-weight: 700;
-  }
-
-  /* ===== HERO ===== */
-  .hero {
-    background: var(--white);
-    padding: 36px 16px 40px;
-    text-align: center;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .hero-badge {
-    display: inline-block;
-    background: var(--blue-light);
-    color: var(--blue);
-    font-size: 12px;
-    font-weight: 700;
-    padding: 6px 16px;
-    border-radius: 100px;
-    margin-bottom: 18px;
-  }
-
-  .hero h1 {
-    font-family: 'Baloo 2', cursive;
-    color: var(--text);
-    font-size: 24px;
-    line-height: 1.3;
-    margin-bottom: 14px;
-    padding: 0 4px;
-  }
-
-  .hero h1 span {
-    color: var(--blue);
-  }
-
-  .hero-img {
-    width: 100%;
-    max-width: 380px;
-    border-radius: var(--radius);
-    margin: 0 auto 22px;
-    display: block;
-    box-shadow: var(--shadow-md);
-    object-fit: cover;
-  }
-
-  .hero-sub {
-    color: var(--text-light);
-    font-size: 15px;
-    line-height: 1.55;
-    margin: 0 auto 24px;
-    padding: 0 4px;
-  }
-
-  .hero-cta {
-    display: block;
-    width: 100%;
-    background: var(--green);
-    color: #fff;
-    font-family: 'Nunito', sans-serif;
-    font-size: 16px;
-    font-weight: 800;
-    text-decoration: none;
-    padding: 16px 24px;
-    border-radius: var(--radius-sm);
-    box-shadow: 0 4px 20px rgba(37,211,102,0.3);
-    transition: all 0.3s;
-    text-align: center;
-    animation: pulse 2.5s infinite;
-  }
-  .hero-cta:active { transform: scale(0.97); }
-
-  @keyframes pulse {
-    0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.3); }
-    50% { box-shadow: 0 4px 32px rgba(37,211,102,0.5); }
-  }
-
-  .hero-trust {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    margin-top: 14px;
-    color: var(--text-muted);
-    font-size: 11px;
-  }
-  .hero-trust svg { width: 13px; height: 13px; fill: var(--text-muted); }
-
-  /* ===== PREVIEW / CARROSSEL ===== */
-  .preview-section {
-    background: var(--white);
-    padding: 36px 0 40px;
-    border-bottom: 1px solid var(--border);
-    overflow: hidden;
-  }
-
-  .preview-header {
-    text-align: center;
-    padding: 0 16px 22px;
-  }
-
-  .preview-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--blue);
-    margin-bottom: 8px;
-  }
-
-  .preview-title {
-    font-family: 'Baloo 2', cursive;
-    font-size: 22px;
-    line-height: 1.3;
-    color: var(--text);
-  }
-
-  .preview-title span { color: var(--blue); }
-
-  .preview-subtitle {
-    font-size: 14px;
-    color: var(--text-light);
-    margin-top: 4px;
-  }
-
-  /* Carousel */
-  .carousel-wrapper {
-    position: relative;
-    width: 100%;
-  }
-
-  .carousel-track {
-    display: flex;
-    gap: 14px;
-    padding: 0 16px;
-    animation: scroll 28s linear infinite;
-    width: max-content;
-    will-change: transform;
-  }
-
-  @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-
-  .carousel-slide {
-    flex-shrink: 0;
-    width: 240px;
-    height: 320px;
-    border-radius: var(--radius);
-    overflow: hidden;
-    background: var(--blue-bg);
-    box-shadow: var(--shadow-md);
-    border: 1px solid var(--border);
-  }
-
-  .carousel-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  .carousel-placeholder {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    text-align: center;
-  }
-  .carousel-placeholder .ph-icon { font-size: 44px; margin-bottom: 10px; }
-  .carousel-placeholder .ph-label {
-    font-size: 13px;
-    font-weight: 800;
-    color: var(--text);
-    margin-bottom: 4px;
-  }
-  .carousel-placeholder .ph-desc {
-    font-size: 11px;
-    color: var(--text-muted);
-    line-height: 1.4;
-  }
-
-  .carousel-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    padding-top: 18px;
-  }
-
-  .carousel-dots {
-    display: flex;
-    gap: 5px;
-  }
-  .carousel-dot {
-    width: 6px; height: 6px;
-    border-radius: 50%;
-    background: var(--border);
-    transition: all 0.3s;
-  }
-  .carousel-dot.active {
-    width: 20px;
-    border-radius: 100px;
-    background: var(--blue);
-  }
-
-  .swipe-hint {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    font-size: 11px;
-    color: var(--text-muted);
-    animation: swipeBounce 2s ease-in-out infinite;
-  }
-  @keyframes swipeBounce {
-    0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(5px); }
-  }
-
-  /* ===== GENERIC SECTIONS ===== */
-  section { padding: 40px 16px; }
-
-  .section-label {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--blue);
-    margin-bottom: 8px;
-  }
-
-  .section-title {
-    font-family: 'Baloo 2', cursive;
-    font-size: 22px;
-    line-height: 1.3;
-    margin-bottom: 16px;
-    color: var(--text);
-  }
-  .section-title span { color: var(--blue); }
-
-  /* ===== DOR ===== */
-  .pain-section { background: var(--white); border-bottom: 1px solid var(--border); }
-
-  .pain-intro {
-    font-size: 14px;
-    color: var(--text-light);
-    line-height: 1.6;
-    margin-bottom: 16px;
-  }
-
-  .pain-list {
-    background: var(--bg);
-    border-radius: var(--radius);
-    padding: 18px 16px;
-    border: 1px solid var(--border);
-    margin-bottom: 12px;
-  }
-  .pain-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 8px 0;
-    font-size: 14px;
-    line-height: 1.5;
-    color: var(--text);
-  }
-  .pain-dot {
-    width: 8px; height: 8px;
-    border-radius: 50%;
-    background: var(--coral);
-    flex-shrink: 0;
-    margin-top: 7px;
-  }
-
-  .pain-solution {
-    background: var(--blue-light);
-    border-radius: var(--radius);
-    padding: 18px 16px;
-    font-size: 14px;
-    line-height: 1.6;
-    color: var(--text);
-    border-left: 4px solid var(--blue);
-    margin-top: 16px;
-  }
-  .pain-solution strong { color: var(--blue); }
-
-  /* ===== BENEFÍCIOS ===== */
-  .benefits-section { background: var(--bg); border-bottom: 1px solid var(--border); }
-
-  .benefits-sub {
-    font-size: 14px;
-    color: var(--text-light);
-    margin-bottom: 18px;
-  }
-
-  .benefit-list {
-    background: var(--white);
-    border-radius: var(--radius);
-    padding: 18px 16px;
-    border: 1px solid var(--border);
-  }
-
-  .benefit-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 9px 0;
-    font-size: 14px;
-    line-height: 1.5;
-  }
-  .benefit-check {
-    font-size: 16px;
-    flex-shrink: 0;
-    margin-top: 1px;
-  }
-
-  .benefits-note {
-    text-align: center;
-    font-size: 13px;
-    color: var(--text-muted);
-    font-style: italic;
-    margin-top: 14px;
-  }
-
-  /* ===== PARA QUEM ===== */
-  .audience-section { background: var(--white); border-bottom: 1px solid var(--border); }
-
-  .audience-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    margin-bottom: 14px;
-  }
-
-  .audience-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 100px;
-    padding: 10px 16px;
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--text);
-  }
-  .audience-tag .tag-emoji { font-size: 18px; }
-
-  .audience-note {
-    text-align: center;
-    font-size: 13px;
-    color: var(--text-light);
-    margin-top: 4px;
-  }
-
-  /* ===== CONTEÚDO DO KIT ===== */
-  .kit-section { background: var(--bg); border-bottom: 1px solid var(--border); }
-
-  .kit-item {
-    background: var(--white);
-    border-radius: var(--radius);
-    padding: 16px;
-    margin-bottom: 10px;
-    border: 1px solid var(--border);
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
-  .kit-icon {
-    width: 40px; height: 40px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    flex-shrink: 0;
-  }
-  .kit-icon.blue { background: var(--blue-light); }
-  .kit-icon.purple { background: var(--purple-light); }
-  .kit-icon.orange { background: #FFF3E6; }
-  .kit-icon.green { background: #E6FFF0; }
-
-  .kit-item h4 {
-    font-size: 14px;
-    font-weight: 800;
-    color: var(--text);
-    margin-bottom: 2px;
-  }
-  .kit-item p {
-    font-size: 12px;
-    color: var(--text-light);
-    line-height: 1.45;
-  }
-
-  /* ===== CTA BLOCK ===== */
-  .cta-block {
-    text-align: center;
-    padding: 32px 16px;
-    background: var(--white);
-    border-bottom: 1px solid var(--border);
-  }
-
-  .cta-btn {
-    display: block;
-    width: 100%;
-    background: var(--green);
-    color: #fff;
-    font-family: 'Nunito', sans-serif;
-    font-size: 16px;
-    font-weight: 800;
-    text-decoration: none;
-    padding: 16px 24px;
-    border-radius: var(--radius-sm);
-    box-shadow: 0 4px 20px rgba(37,211,102,0.3);
-    transition: all 0.3s;
-    text-align: center;
-    animation: pulse 2.5s infinite;
-  }
-  .cta-btn:active { transform: scale(0.97); }
-
-  .cta-sub {
-    font-size: 11px;
-    color: var(--text-muted);
-    margin-top: 8px;
-  }
-
-  .objection-strip {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    justify-content: center;
-    margin-top: 12px;
-  }
-  .objection-pill {
-    background: var(--blue-light);
-    border-radius: 100px;
-    padding: 5px 12px;
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--blue);
-  }
-
-  /* ===== BÔNUS ===== */
-  .bonus-section { background: var(--cream); border-bottom: 1px solid var(--border); }
-
-  .bonus-card {
-    background: var(--white);
-    border-radius: var(--radius);
-    padding: 18px 16px;
-    margin-bottom: 10px;
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow-sm);
-  }
-  .bonus-card .bonus-tag {
-    display: inline-block;
-    background: var(--orange);
-    color: #fff;
-    font-size: 10px;
-    font-weight: 800;
-    padding: 3px 10px;
-    border-radius: 100px;
-    margin-bottom: 8px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-  }
-  .bonus-card h4 {
-    font-size: 15px;
-    font-weight: 800;
-    color: var(--text);
-    margin-bottom: 4px;
-  }
-  .bonus-card p {
-    font-size: 13px;
-    color: var(--text-light);
-    line-height: 1.5;
-  }
-
-  /* ===== DEPOIMENTOS ===== */
-  .testimonials-section { background: var(--white); border-bottom: 1px solid var(--border); }
-
-  /* Carrossel de fotos */
-  .photo-carousel-wrapper {
-    overflow: hidden;
-    margin: 0 -16px 24px;
-  }
-  .photo-carousel-track {
-    display: flex;
-    gap: 10px;
-    padding: 0 16px;
-    animation: scrollPhotos 22s linear infinite;
-    width: max-content;
-    will-change: transform;
-  }
-  @keyframes scrollPhotos {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-  .photo-carousel-track:hover { animation-play-state: paused; }
-  .photo-slide {
-    flex-shrink: 0;
-    width: 160px;
-    height: 160px;
-    border-radius: var(--radius);
-    overflow: hidden;
-    border: 2px solid var(--border);
-    box-shadow: var(--shadow-sm);
-    background: var(--bg);
-  }
-  .photo-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  .photo-slide-placeholder {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    color: var(--text-muted);
-    font-size: 11px;
-    text-align: center;
-    padding: 10px;
-  }
-  .photo-slide-placeholder span { font-size: 28px; }
-
-  .testimonial-card {
-    background: var(--bg);
-    border-radius: var(--radius);
-    padding: 16px;
-    margin-bottom: 10px;
-    border: 1px solid var(--border);
-    position: relative;
-  }
-  .testimonial-card::before {
-    content: '"';
-    font-family: 'Baloo 2', cursive;
-    font-size: 40px;
-    color: var(--blue);
-    opacity: 0.15;
-    position: absolute;
-    top: 4px; left: 12px;
-    line-height: 1;
-  }
-  .testimonial-text {
-    font-size: 13px;
-    line-height: 1.6;
-    margin-bottom: 10px;
-  }
-  .testimonial-author { display: flex; align-items: center; gap: 8px; }
-  .testimonial-avatar {
-    width: 32px; height: 32px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 13px;
-    font-weight: 800;
-    color: #fff;
-  }
-  .testimonial-name { font-size: 12px; font-weight: 700; color: var(--text); }
-  .testimonial-role { font-size: 10px; color: var(--text-muted); }
-
-  /* ===== STACK / PREÇO ===== */
-  .stack-section { background: var(--bg); border-bottom: 1px solid var(--border); }
-
-  .stack-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 12px 0;
-    border-bottom: 1px solid var(--border);
-  }
-  .stack-item:last-of-type { border-bottom: none; }
-
-  .stack-check {
-    width: 24px; height: 24px;
-    border-radius: 50%;
-    background: var(--blue-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    margin-top: 1px;
-  }
-  .stack-check svg { width: 12px; height: 12px; fill: var(--blue); }
-
-  .stack-item h4 { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 1px; }
-  .stack-item p { font-size: 11px; color: var(--text-light); line-height: 1.4; }
-  .stack-value {
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--coral);
-    margin-top: 2px;
-    display: inline-block;
-  }
-
-  .stack-total {
-    background: linear-gradient(135deg, var(--blue) 0%, var(--purple) 100%);
-    border-radius: var(--radius);
-    padding: 24px 16px;
-    text-align: center;
-    margin-top: 18px;
-    color: #fff;
-  }
-  .stack-total .original-price {
-    font-size: 13px;
-    color: rgba(255,255,255,0.55);
-    text-decoration: line-through;
-  }
-  .stack-total .final-price {
-    font-family: 'Baloo 2', cursive;
-    font-size: 42px;
-    color: #fff;
-    line-height: 1.1;
-  }
-  .stack-total .final-price small {
-    font-size: 15px;
-    color: rgba(255,255,255,0.7);
-  }
-  .stack-total .installments {
-    font-size: 12px;
-    color: rgba(255,255,255,0.6);
-    margin-top: 4px;
-  }
-
-  /* ===== GARANTIA ===== */
-  .guarantee-section { background: var(--white); border-bottom: 1px solid var(--border); }
-
-  .guarantee-box {
-    background: var(--bg);
-    border-radius: var(--radius);
-    padding: 24px 16px;
-    text-align: center;
-    border: 2px solid var(--blue);
-  }
-  .guarantee-icon {
-    width: 52px; height: 52px;
-    margin: 0 auto 12px;
-    background: var(--blue-light);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 26px;
-  }
-  .guarantee-box h3 {
-    font-family: 'Baloo 2', cursive;
-    font-size: 18px;
-    color: var(--text);
-    margin-bottom: 8px;
-  }
-  .guarantee-box p {
-    font-size: 13px;
-    color: var(--text-light);
-    line-height: 1.6;
-  }
-  .risk-list { text-align: left; margin-top: 14px; }
-  .risk-list li {
-    list-style: none;
-    font-size: 13px;
-    color: var(--text);
-    padding: 4px 0;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .risk-list li::before {
-    content: '✓';
-    color: var(--blue);
-    font-weight: 800;
-    font-size: 14px;
-  }
-
-  /* ===== FAQ ===== */
-  .faq-section { background: var(--bg); }
-
-  .faq-item { border-bottom: 1px solid var(--border); padding: 14px 0; }
-  .faq-q {
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--text);
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    min-height: 44px;
-    -webkit-user-select: none;
-    user-select: none;
-  }
-  .faq-q::after {
-    content: '+';
-    font-size: 20px;
-    color: var(--blue);
-    flex-shrink: 0;
-    transition: transform 0.3s;
-  }
-  .faq-q.open::after { transform: rotate(45deg); }
-
-  .faq-a {
-    font-size: 13px;
-    color: var(--text-light);
-    line-height: 1.6;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.35s ease, padding 0.35s ease;
-  }
-  .faq-a.open { max-height: 200px; padding-top: 8px; }
-
-  /* ===== BONUS PRICE ===== */
-  .bonus-price {
-    margin-top: 8px;
-    font-size: 13px;
-    color: var(--text-light);
-  }
-  .bonus-price s { color: var(--text-muted); margin-right: 6px; }
-  .bonus-price strong { color: #27AE60; font-weight: 800; }
-
-  /* ===== PLANS ===== */
-  .plans-section {
-    background: var(--bg);
-    padding: 40px 16px;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .plan-card {
-    background: var(--white);
-    border-radius: var(--radius);
-    padding: 24px 16px;
-    margin-bottom: 16px;
-    border: 1px solid var(--border);
-    text-align: center;
-    position: relative;
-  }
-
-  .plan-card-featured {
-    border: 2px solid var(--blue);
-    box-shadow: var(--shadow-md);
-  }
-
-  .plan-badge {
-    display: inline-block;
-    background: var(--blue);
-    color: #fff;
-    font-size: 11px;
-    font-weight: 800;
-    padding: 6px 16px;
-    border-radius: 100px;
-    margin-bottom: 14px;
-    letter-spacing: 0.3px;
-  }
-
-  .plan-name {
-    font-family: 'Baloo 2', cursive;
-    font-size: 22px;
-    color: var(--text);
-    margin-bottom: 4px;
-  }
-
-  .plan-price {
-    font-family: 'Baloo 2', cursive;
-    font-size: 18px;
-    color: var(--text);
-    margin-bottom: 2px;
-  }
-  .plan-price strong {
-    font-size: 42px;
-    color: var(--blue);
-  }
-  .plan-price small {
-    font-size: 18px;
-    color: var(--text);
-  }
-
-  .plan-payment {
-    font-size: 13px;
-    color: var(--text-muted);
-    margin-bottom: 18px;
-  }
-
-  .plan-features {
-    text-align: left;
-    margin-bottom: 18px;
-  }
-  .plan-feature {
-    font-size: 13px;
-    color: var(--text);
-    padding: 5px 0;
-    line-height: 1.5;
-  }
-
-  .plan-bonus-box {
-    background: var(--blue-light);
-    border-radius: var(--radius-sm);
-    padding: 14px 12px;
-    margin-bottom: 18px;
-    text-align: left;
-  }
-  .plan-bonus-title {
-    font-size: 12px;
-    font-weight: 800;
-    color: var(--blue);
-    margin-bottom: 8px;
-    text-align: center;
-  }
-  .plan-bonus-item {
-    font-size: 12px;
-    color: var(--text);
-    padding: 3px 0;
-    line-height: 1.5;
-  }
-
-  .plan-btn {
-    display: block;
-    width: 100%;
-    font-family: 'Nunito', sans-serif;
-    font-size: 15px;
-    font-weight: 800;
-    text-decoration: none;
-    padding: 14px 20px;
-    border-radius: var(--radius-sm);
-    text-align: center;
-    transition: all 0.3s;
-    min-height: 48px;
-  }
-  .plan-btn:active { transform: scale(0.97); }
-
-  .plan-btn-basic {
-    background: var(--green);
-    color: #fff;
-    box-shadow: 0 4px 16px rgba(37,211,102,0.25);
-  }
-
-  .plan-btn-featured {
-    background: var(--green);
-    color: #fff;
-    box-shadow: 0 4px 20px rgba(37,211,102,0.35);
-    animation: pulse 2.5s infinite;
-  }
-
-  .plan-trust {
-    font-size: 10px;
-    color: var(--text-muted);
-    margin-top: 12px;
-    line-height: 1.6;
-  }
-
-  /* ===== FINAL CTA ===== */
-  .final-cta {
-    background: linear-gradient(165deg, var(--blue) 0%, var(--purple) 100%);
-    padding: 40px 16px;
-    text-align: center;
-  }
-  .final-cta h2 {
-    font-family: 'Baloo 2', cursive;
-    color: #fff;
-    font-size: 22px;
-    line-height: 1.3;
-    margin-bottom: 8px;
-  }
-  .final-cta p {
-    color: rgba(255,255,255,0.75);
-    font-size: 14px;
-    margin-bottom: 20px;
-  }
-  .final-cta .cta-btn {
-    background: #fff;
-    color: var(--blue);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    animation: none;
-  }
-  .final-cta .cta-btn:active { transform: scale(0.97); }
-  .final-cta .trust-line {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    margin-top: 12px;
-    color: rgba(255,255,255,0.5);
-    font-size: 11px;
-  }
-  .final-cta .trust-line svg { width: 12px; height: 12px; fill: rgba(255,255,255,0.5); }
-
-  /* ===== FOOTER ===== */
-  footer {
-    background: var(--white);
-    padding: 20px 16px;
-    text-align: center;
-    color: var(--text-muted);
-    font-size: 10px;
-    line-height: 1.7;
-    border-top: 1px solid var(--border);
-  }
-
-  /* ===== FLOATING CTA ===== */
-  .floating-cta {
-    position: fixed;
-    bottom: 0; left: 0; right: 0;
-    background: rgba(255,255,255,0.96);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
-    box-shadow: 0 -2px 16px rgba(0,0,0,0.08);
-    z-index: 100;
-    transform: translateY(100%);
-    transition: transform 0.4s ease;
-  }
-  .floating-cta.visible { transform: translateY(0); }
-
-  .floating-cta a {
-    display: block;
-    background: var(--green);
-    color: #fff;
-    font-family: 'Nunito', sans-serif;
-    font-size: 15px;
-    font-weight: 800;
-    text-decoration: none;
-    padding: 14px 20px;
-    border-radius: var(--radius-sm);
-    box-shadow: 0 4px 16px rgba(37,211,102,0.3);
-    text-align: center;
-  }
-  .floating-cta a:active { transform: scale(0.97); }
-
-  /* ===== TOUCH ===== */
-  a, button, .faq-q { -webkit-touch-callout: none; touch-action: manipulation; }
-  .hero-cta, .cta-btn, .floating-cta a { min-height: 48px; }
+:root {
+  --petrol: #2D6A7A;
+  --petrol-dark: #1E3A4A;
+  --green-accent: #1A7F6D;
+  --green-dark: #1A4D40;
+  --orange: #FF7043;
+  --orange-hover: #E5633A;
+  --white: #FFFFFF;
+  --off-white: #FAFBFC;
+  --cream: #FFF8F0;
+  --text: #2B2D42;
+  --text-light: #6C6F85;
+  --text-muted: #9B9DB5;
+  --border: #E8EAF2;
+  --petrol-light: #EBF4F7;
+  --shadow-sm: 0 2px 8px rgba(45,106,122,0.08);
+  --shadow-md: 0 4px 24px rgba(45,106,122,0.13);
+  --radius: 16px;
+  --radius-sm: 12px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: var(--text);
+  background: var(--off-white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; line-height: 1.2; }
+
+img { display: block; max-width: 100%; }
+
+a, button, [onclick] {
+  -webkit-touch-callout: none;
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* ── URGENCY BAR ── */
+.urgency-bar {
+  background: linear-gradient(90deg, var(--petrol-dark) 0%, var(--green-dark) 100%);
+  color: #fff;
+  text-align: center;
+  padding: 10px 16px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+/* ── HERO ── */
+.hero {
+  background: var(--white);
+  padding: 32px 16px 40px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-badge {
+  display: inline-block;
+  background: var(--petrol-light);
+  color: var(--petrol);
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--text);
+  line-height: 1.25;
+  margin-bottom: 14px;
+  padding: 0 2px;
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: var(--green-accent);
+}
+
+.hero-sub {
+  font-size: 15px;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  padding: 0 4px;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: var(--radius);
+  margin: 0 auto 24px;
+  box-shadow: var(--shadow-md);
+  object-fit: cover;
+}
+
+.hero-img-placeholder {
+  width: 100%;
+  max-width: 380px;
+  height: 220px;
+  margin: 0 auto 24px;
+  background: var(--petrol-light);
+  border-radius: var(--radius);
+  border: 2px dashed var(--petrol);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--petrol);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.cta-btn {
+  display: block;
+  width: 100%;
+  background: var(--orange);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  text-decoration: none;
+  padding: 18px 24px;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 20px rgba(255,112,67,0.35);
+  transition: background 0.2s, transform 0.15s;
+  text-align: center;
+  min-height: 48px;
+  letter-spacing: 0.3px;
+}
+.cta-btn:active { transform: scale(0.97); background: var(--orange-hover); }
+
+.cta-pulse { animation: ctaPulse 2.5s infinite; }
+@keyframes ctaPulse {
+  0%, 100% { box-shadow: 0 4px 20px rgba(255,112,67,0.35); }
+  50% { box-shadow: 0 4px 32px rgba(255,112,67,0.55); }
+}
+
+.hero-trust {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  margin-top: 12px;
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 600;
+}
+.hero-trust svg { width: 13px; height: 13px; fill: var(--green-accent); vertical-align: middle; margin-right: 2px; }
+
+.hero-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.pill {
+  background: var(--petrol-light);
+  color: var(--petrol);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 7px 14px;
+  border-radius: 100px;
+  border: 1px solid rgba(45,106,122,0.15);
+}
+
+/* ── DEMONSTRATIVO ── */
+.demo-section {
+  background: var(--white);
+  padding: 40px 0;
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+.demo-header {
+  text-align: center;
+  padding: 0 16px 22px;
+}
+.section-label {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--petrol);
+  margin-bottom: 8px;
+}
+.demo-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.3;
+}
+.demo-sub {
+  font-size: 14px;
+  color: var(--text-light);
+  margin-top: 6px;
+}
+
+.carousel-wrapper { position: relative; width: 100%; }
+.carousel-track {
+  display: flex;
+  gap: 14px;
+  padding: 0 16px;
+  animation: scrollCarousel 28s linear infinite;
+  width: max-content;
+  will-change: transform;
+}
+@keyframes scrollCarousel {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.carousel-slide {
+  flex-shrink: 0;
+  width: 240px;
+  height: 320px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--petrol-light);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+}
+.carousel-slide img { width: 100%; height: 100%; object-fit: cover; }
+.carousel-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding-top: 18px;
+}
+.carousel-dots { display: flex; gap: 5px; }
+.carousel-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--border);
+  transition: all 0.3s;
+}
+.carousel-dot.active {
+  width: 20px;
+  border-radius: 100px;
+  background: var(--petrol);
+}
+.swipe-hint {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--text-muted);
+  animation: swipeBounce 2s ease-in-out infinite;
+}
+@keyframes swipeBounce {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(5px); }
+}
+
+/* ── BENEFÍCIOS ── */
+.benefits-section {
+  background: var(--off-white);
+  padding: 48px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--text);
+  line-height: 1.25;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+.section-title em { font-style: normal; color: var(--green-accent); }
+.section-sub {
+  font-size: 14px;
+  color: var(--text-light);
+  margin-bottom: 24px;
+}
+.benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.benefit-card {
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  padding: 18px 14px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+.benefit-icon { font-size: 28px; margin-bottom: 8px; }
+.benefit-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.35;
+}
+
+/* ── CTA EMOCIONAL ── */
+.emotional-cta {
+  background: var(--petrol-dark);
+  padding: 48px 16px;
+  text-align: center;
+}
+.emotional-cta h2 {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.25;
+  margin-bottom: 14px;
+}
+.emotional-cta h2 em {
+  font-style: normal;
+  color: #7DD8CC;
+}
+.emotional-cta p {
+  font-size: 15px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.65;
+  margin-bottom: 24px;
+}
+.emotional-cta .trust-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+  color: rgba(255,255,255,0.45);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* ── IDEAL PRA VOCÊ ── */
+.ideal-section {
+  background: var(--white);
+  padding: 48px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.desire-list {
+  background: var(--off-white);
+  border-radius: var(--radius);
+  padding: 20px 16px;
+  border: 1px solid var(--border);
+  margin-bottom: 20px;
+}
+.desire-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 0;
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.5;
+  border-bottom: 1px solid var(--border);
+}
+.desire-item:last-child { border-bottom: none; }
+.desire-check {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--green-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+  font-size: 12px;
+  color: #fff;
+  font-weight: 800;
+}
+.audience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+.audience-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--petrol-light);
+  border: 1px solid rgba(45,106,122,0.2);
+  border-radius: 100px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--petrol);
+}
+
+/* ── DEPOIMENTOS ── */
+.testimonials-section {
+  background: var(--off-white);
+  padding: 48px 0;
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+.testimonials-header {
+  padding: 0 16px 24px;
+}
+.photo-carousel-wrapper { overflow: hidden; margin-bottom: 28px; }
+.photo-carousel-track {
+  display: flex;
+  gap: 10px;
+  padding: 0 16px;
+  animation: scrollPhotos 22s linear infinite;
+  width: max-content;
+  will-change: transform;
+}
+@keyframes scrollPhotos {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.photo-carousel-track:hover { animation-play-state: paused; }
+.photo-slide {
+  flex-shrink: 0;
+  width: 170px;
+  height: 170px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 2px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  background: var(--petrol-light);
+}
+.photo-slide img { width: 100%; height: 100%; object-fit: cover; }
+
+.testimonial-cards { padding: 0 16px; }
+.testimonial-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+.testimonial-card::before {
+  content: '"';
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px;
+  color: var(--petrol);
+  opacity: 0.1;
+  position: absolute;
+  top: 4px; left: 12px;
+  line-height: 1;
+}
+.testimonial-text {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+.testimonial-author { display: flex; align-items: center; gap: 10px; }
+.testimonial-avatar {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  color: #fff;
+  flex-shrink: 0;
+}
+.testimonial-name { font-size: 13px; font-weight: 700; color: var(--text); }
+.testimonial-role { font-size: 11px; color: var(--text-muted); }
+.testimonial-stars { font-size: 13px; color: #F59E0B; margin-bottom: 2px; }
+
+/* ── O QUE VEM DENTRO ── */
+.contents-section {
+  background: var(--petrol-dark);
+  padding: 48px 16px;
+}
+.contents-badge {
+  display: inline-block;
+  background: var(--orange);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+}
+.contents-section .section-title { color: var(--white); margin-bottom: 6px; }
+.contents-section .section-title em { color: #7DD8CC; }
+.contents-section .section-sub { color: rgba(255,255,255,0.6); margin-bottom: 24px; }
+
+.kit-img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: var(--radius);
+  margin: 0 auto 24px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  object-fit: cover;
+}
+
+.contents-list { list-style: none; }
+.contents-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  font-size: 14px;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.5;
+}
+.contents-list li:last-child { border-bottom: none; }
+.check-circle {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--green-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 12px;
+  color: #fff;
+  font-weight: 800;
+  margin-top: 1px;
+}
+
+/* ── BÔNUS ── */
+.bonus-section {
+  background: var(--cream);
+  padding: 48px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.bonus-badge {
+  display: inline-block;
+  background: var(--orange);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 8px 18px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+  letter-spacing: 0.3px;
+}
+.bonus-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 20px 16px;
+  margin-bottom: 12px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.bonus-num {
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  background: var(--petrol-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--petrol);
+  flex-shrink: 0;
+}
+.bonus-content h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+  line-height: 1.35;
+}
+.bonus-content p {
+  font-size: 12px;
+  color: var(--text-light);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+.bonus-price { font-size: 13px; }
+.bonus-price s { color: var(--text-muted); margin-right: 6px; }
+.bonus-price strong { color: var(--green-accent); font-weight: 800; }
+
+/* ── OFERTA ── */
+.offer-section {
+  background: var(--green-dark);
+  padding: 48px 16px;
+}
+.offer-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.9);
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+.offer-section h2 {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+.offer-section h2 em { font-style: normal; color: #F9D06F; }
+.offer-section > p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+.offer-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 28px 20px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+.offer-card-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+.offer-price {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1;
+  margin-bottom: 4px;
+  color: var(--text);
+}
+.offer-price .currency { font-size: 20px; font-weight: 700; vertical-align: top; margin-top: 8px; display: inline-block; }
+.offer-price .amount { font-size: 56px; font-weight: 900; color: var(--petrol); }
+.offer-price .cents { font-size: 20px; font-weight: 700; vertical-align: top; margin-top: 8px; display: inline-block; }
+.offer-payment {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+.offer-includes {
+  text-align: left;
+  background: var(--off-white);
+  border-radius: var(--radius-sm);
+  padding: 16px 14px;
+  margin-bottom: 20px;
+}
+.offer-includes-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.offer-item {
+  font-size: 13px;
+  color: var(--text);
+  padding: 4px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.4;
+}
+.offer-item::before {
+  content: '✓';
+  color: var(--green-accent);
+  font-weight: 800;
+  flex-shrink: 0;
+  font-size: 14px;
+}
+.offer-trust {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 12px;
+  line-height: 1.7;
+}
+.guarantee-inline {
+  background: var(--petrol-light);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--petrol);
+  line-height: 1.6;
+  border-left: 3px solid var(--petrol);
+  text-align: left;
+}
+
+/* ── FAQ ── */
+.faq-section {
+  background: var(--off-white);
+  padding: 48px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-q {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  padding: 16px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  min-height: 48px;
+}
+.faq-q::after {
+  content: '+';
+  font-size: 22px;
+  color: var(--petrol);
+  flex-shrink: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  transition: transform 0.3s;
+}
+.faq-q.open::after { transform: rotate(45deg); }
+.faq-a {
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 1.65;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.3s ease;
+}
+.faq-a.open { max-height: 300px; padding-bottom: 16px; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--petrol-dark);
+  padding: 24px 16px;
+  text-align: center;
+  color: rgba(255,255,255,0.4);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+/* ── FLOATING CTA ── */
+.floating-cta {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+  box-shadow: 0 -2px 20px rgba(0,0,0,0.1);
+  z-index: 100;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+.floating-cta.visible { transform: translateY(0); }
+.floating-cta a {
+  display: block;
+  background: var(--orange);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  text-decoration: none;
+  padding: 15px 20px;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 16px rgba(255,112,67,0.35);
+  text-align: center;
+  min-height: 48px;
+}
+.floating-cta a:active { transform: scale(0.97); }
+
+/* ── INTER-SECTION CTA ── */
+.cta-block {
+  padding: 32px 16px;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+.cta-sub {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 10px;
+  line-height: 1.7;
+}
 </style>
 </head>
 <body>
 
-<!-- URGENCY BAR -->
+<!-- ════════════════════════════════════
+     BLOCO 01 — HERO
+════════════════════════════════════ -->
+
+<!-- Urgência -->
 <div class="urgency-bar">
-  🔥 OFERTA ESPECIAL POR TEMPO LIMITADO 🔥
+  ⚡ OFERTA ESPECIAL — DISPONÍVEL APENAS HOJE, <span id="urgencyDate"></span>
 </div>
 
-<!-- HERO -->
+<!-- Hero -->
 <header class="hero">
   <div class="hero-badge">Kit Comunicação e Rotina Visual</div>
-  <h1>Comunicação Visual + Rotina + Atividades para Crianças com <span>Autismo e Atraso de Fala</span></h1>
-  <img src="fotos/hero.png" alt="Kit Comunicação e Rotina Visual" class="hero-img">
-  <p class="hero-sub">Material desenvolvido para ajudar crianças com autismo, TDAH e dificuldades de comunicação a se expressarem melhor e compreenderem sua rotina diária.</p>
-  <a href="#planos" class="hero-cta">QUERO MEU KIT AGORA →</a>
+
+  <h1>+1500 Materiais de Comunicação Alternativa e Rotina Visual Que <em>Estimulam a Fala</em> da Sua Criança Todos os Dias</h1>
+
+  <!-- IMAGEM HERO: substitua pelo mockup real -->
+  <img src="fotos/hero.png" alt="Kit Comunicação e Rotina Visual" class="hero-img"
+       onerror="this.outerHTML='<div class=\'hero-img-placeholder\'><span style=\'font-size:36px\'>📦</span><span>Adicione seu mockup em fotos/hero.png</span></div>'">
+
+  <p class="hero-sub">+1500 materiais prontos de comunicação visual, rotina e atividades pra crianças com atraso de fala e dificuldades de comunicação. É só baixar, imprimir e usar hoje.</p>
+
+  <a href="https://pay.wiapy.com/69e66e8191fb6aa98d0731b5" class="cta-btn cta-pulse">BAIXAR MEU KIT AGORA →</a>
+
   <div class="hero-trust">
-    <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-    Pagamento seguro • Acesso imediato
+    <span><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>Compra Segura</span>
+    <span>·</span>
+    <span>⚡ Acesso Imediato</span>
+    <span>·</span>
+    <span>🛡️ Garantia 15 dias</span>
+  </div>
+
+  <div class="hero-pills">
+    <span class="pill">✅ Estimula a fala</span>
+    <span class="pill">🖨️ Imprimir e usar</span>
+    <span class="pill">🧠 Baseado em CAA</span>
+    <span class="pill">⚡ Acesso imediato</span>
+    <span class="pill">📄 PDF + Canva</span>
   </div>
 </header>
 
-<!-- PREVIEW / CARROSSEL -->
-<section class="preview-section">
-  <div class="preview-header">
-    <div class="preview-label">👀 Espie por dentro</div>
-    <h2 class="preview-title">Veja o que tem <span>dentro do Kit</span></h2>
-    <p class="preview-subtitle">Material profissional, bonito e pronto pra usar</p>
+
+<!-- ════════════════════════════════════
+     BLOCO 02 — DEMONSTRATIVO
+════════════════════════════════════ -->
+<section class="demo-section">
+  <div class="demo-header">
+    <div class="section-label">👀 Veja o kit por dentro</div>
+    <h2 class="demo-title">Mais de 1500 materiais prontos para imprimir e aplicar hoje mesmo</h2>
+    <p class="demo-sub">Material profissional, bonito e fácil de usar em casa</p>
   </div>
 
   <div class="carousel-wrapper">
     <div class="carousel-track" id="carouselTrack">
+      <!-- Originais -->
       <div class="carousel-slide"><img src="fotos/produtos/foto1.jpg" alt="Material do Kit"></div>
       <div class="carousel-slide"><img src="fotos/produtos/foto2.jpg" alt="Material do Kit"></div>
       <div class="carousel-slide"><img src="fotos/produtos/foto3.jpg" alt="Material do Kit"></div>
@@ -1067,161 +924,119 @@
   </div>
 </section>
 
-<!-- SISTEMA COMPLETO -->
-<section class="pain-section">
-  <h2 class="section-title">Sistema Completo de <span>Comunicação Visual e Rotina</span></h2>
-  <p class="pain-intro">Muitas crianças com autismo ou atraso de fala sabem o que querem, mas não conseguem expressar.</p>
 
-  <div class="pain-list">
-    <p style="font-size:14px;font-weight:700;margin-bottom:8px;color:var(--text);">Isso pode gerar:</p>
-    <div class="pain-item"><div class="pain-dot"></div>frustração</div>
-    <div class="pain-item"><div class="pain-dot"></div>crises de choro</div>
-    <div class="pain-item"><div class="pain-dot"></div>dificuldade de interação</div>
-    <div class="pain-item"><div class="pain-dot"></div>dificuldade na rotina diária</div>
-  </div>
-
-  <div class="pain-solution">
-    O <strong>Kit Comunicação e Rotina Visual</strong> foi desenvolvido para ajudar a criança a se comunicar através de imagens e rotinas estruturadas, facilitando o dia a dia em casa, na escola e na terapia.
-  </div>
-</section>
-
-<!-- BENEFÍCIOS -->
+<!-- ════════════════════════════════════
+     BLOCO 03 — BENEFÍCIOS
+════════════════════════════════════ -->
 <section class="benefits-section">
-  <h2 class="section-title">Como o material ajuda no <span>dia a dia da criança</span></h2>
-  <p class="benefits-sub">Utilizando comunicação visual, a criança consegue:</p>
+  <div class="section-label">Por que esse kit faz a diferença</div>
+  <h2 class="section-title">VOCÊ RECEBERÁ UM<br><em>MATERIAL ÚNICO</em></h2>
+  <p class="section-sub">Desenvolvido para estimular a fala e a comunicação da sua criança todos os dias</p>
 
-  <div class="benefit-list">
-    <div class="benefit-item"><span class="benefit-check">✅</span> indicar necessidades básicas</div>
-    <div class="benefit-item"><span class="benefit-check">✅</span> compreender melhor a rotina</div>
-    <div class="benefit-item"><span class="benefit-check">✅</span> desenvolver comunicação funcional</div>
-    <div class="benefit-item"><span class="benefit-check">✅</span> reduzir ansiedade e frustrações</div>
-    <div class="benefit-item"><span class="benefit-check">✅</span> aumentar autonomia</div>
+  <div class="benefits-grid">
+    <div class="benefit-card">
+      <div class="benefit-icon">🖨️</div>
+      <div class="benefit-title">Imprimir e aplicar sem complicação</div>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">🗣️</div>
+      <div class="benefit-title">Estimula a fala todos os dias</div>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">😌</div>
+      <div class="benefit-title">Criança mais comunicativa e tranquila</div>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">🏠</div>
+      <div class="benefit-title">Complementa a terapia nos outros 5 dias</div>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">👩</div>
+      <div class="benefit-title">Sem precisar de experiência profissional</div>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">⚡</div>
+      <div class="benefit-title">Acesso digital imediato — use hoje mesmo</div>
+    </div>
   </div>
-
-  <p class="benefits-note">Tudo através de recursos visuais simples e práticos.</p>
 </section>
 
-<!-- PARA QUEM -->
-<section class="audience-section">
-  <h2 class="section-title" style="text-align:center;">MATERIAL IDEAL <span>PARA</span></h2>
+
+<!-- ════════════════════════════════════
+     BLOCO 04 — CTA EMOCIONAL
+════════════════════════════════════ -->
+<section class="emotional-cta">
+  <h2>A terapia funciona.<br><em>Mas são só 2 sessões por semana.</em></h2>
+  <p>Sua criança precisa de estímulo todos os dias, não só nas sessões. O material de comunicação alternativa que você vê na mesa da fono por R$200 a sessão, agora na sua casa por menos de R$30 — pronto pra usar hoje e continuar em casa o trabalho que a fono começou no consultório.</p>
+  <a href="https://pay.wiapy.com/69e66e8191fb6aa98d0731b5" class="cta-btn cta-pulse">QUERO ESTIMULAR MEU FILHO EM CASA →</a>
+  <div class="trust-row">
+    <span>🔒 Seguro</span>
+    <span>·</span>
+    <span>⚡ Acesso imediato</span>
+    <span>·</span>
+    <span>🛡️ Garantia 15 dias</span>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════
+     BLOCO 05 — IDEAL PRA VOCÊ
+════════════════════════════════════ -->
+<section class="ideal-section">
+  <div class="section-label">Para quem é esse kit</div>
+  <h2 class="section-title">IDEAL PARA VOCÊ<br>QUE <em>DESEJA</em></h2>
+
+  <div class="desire-list" style="margin-top:20px;">
+    <div class="desire-item">
+      <div class="desire-check">✓</div>
+      Estimular a fala do seu filho em casa, todos os dias
+    </div>
+    <div class="desire-item">
+      <div class="desire-check">✓</div>
+      Continuar o trabalho da terapia nos outros 5 dias da semana
+    </div>
+    <div class="desire-item">
+      <div class="desire-check">✓</div>
+      Ter materiais prontos sem precisar criar do zero
+    </div>
+    <div class="desire-item">
+      <div class="desire-check">✓</div>
+      Reduzir crises e frustração na rotina diária
+    </div>
+    <div class="desire-item">
+      <div class="desire-check">✓</div>
+      Dar mais autonomia pra criança se expressar
+    </div>
+    <div class="desire-item">
+      <div class="desire-check">✓</div>
+      Organizar a rotina com apoio visual claro e bonito
+    </div>
+  </div>
 
   <div class="audience-tags">
-    <div class="audience-tag"><span class="tag-emoji">👨‍👩‍👧</span> Pais de crianças com autismo</div>
-    <div class="audience-tag"><span class="tag-emoji">👩‍🏫</span> Professores</div>
-    <div class="audience-tag"><span class="tag-emoji">🧠</span> Psicopedagogos</div>
-    <div class="audience-tag"><span class="tag-emoji">🗣️</span> Fonoaudiólogos</div>
-    <div class="audience-tag"><span class="tag-emoji">💆</span> Terapeutas</div>
-  </div>
-
-  <p class="audience-note">Material pensado para ser simples, visual e fácil de aplicar no dia a dia.</p>
-</section>
-
-<!-- CTA -->
-<div class="cta-block">
-  <a href="#planos" class="cta-btn">QUERO MEU KIT AGORA →</a>
-  <div class="objection-strip">
-    <span class="objection-pill">✓ Acesso imediato</span>
-    <span class="objection-pill">✓ Editável no Canva</span>
-    <span class="objection-pill">✓ Garantia de 15 dias</span>
-  </div>
-</div>
-
-<!-- O QUE VEM NO KIT -->
-<section class="kit-section">
-  <span class="section-label">O que você encontra no Kit</span>
-  <h2 class="section-title">Tudo o que você precisa, <span>pronto pra usar</span></h2>
-
-  <div class="kit-item">
-    <div class="kit-icon blue">💬</div>
-    <div>
-      <h4>Tags de Comunicação</h4>
-      <p>Cartões visuais para a criança expressar necessidades, sentimentos e pedidos do dia a dia.</p>
-    </div>
-  </div>
-  <div class="kit-item">
-    <div class="kit-icon purple">📋</div>
-    <div>
-      <h4>Quadros de Rotina Visual</h4>
-      <p>Rotina diária, semanal, escolar e noturna com pictogramas profissionais e claros.</p>
-    </div>
-  </div>
-  <div class="kit-item">
-    <div class="kit-icon orange">📝</div>
-    <div>
-      <h4>Atividades de Apoio</h4>
-      <p>Exercícios de pareamento, sequência lógica e identificação de emoções.</p>
-    </div>
-  </div>
-  <div class="kit-item">
-    <div class="kit-icon green">✏️</div>
-    <div>
-      <h4>Templates Editáveis no Canva</h4>
-      <p>Personalize tudo com as fotos e atividades da sua criança — sem saber design.</p>
-    </div>
+    <div class="audience-tag">👩 Mães</div>
+    <div class="audience-tag">👨 Pais</div>
+    <div class="audience-tag">🤝 Cuidadores</div>
   </div>
 </section>
 
-<!-- BÔNUS -->
-<section class="bonus-section">
-  <h2 class="section-title" style="text-align:center;">🎁 VOCÊ LEVA 06 SUPER <span>BÔNUS EXCLUSIVOS!</span></h2>
 
-  <div class="bonus-card">
-    <span class="bonus-tag">Bônus 1</span>
-    <h4>🧩 30 Jogos Pedagógicos para Autismo</h4>
-    <p>Atividades lúdicas pensadas para estimular aprendizado, atenção e interação de forma divertida.</p>
-    <div class="bonus-price"><s>De R$ 37</s> <strong>HOJE: GRÁTIS</strong></div>
-  </div>
-  <div class="bonus-card">
-    <span class="bonus-tag">Bônus 2</span>
-    <h4>🃏 Kit Baralhos Terapêuticos</h4>
-    <p>Cartas temáticas para trabalhar emoções, habilidades sociais e comunicação de forma lúdica.</p>
-    <div class="bonus-price"><s>De R$ 27</s> <strong>HOJE: GRÁTIS</strong></div>
-  </div>
-  <div class="bonus-card">
-    <span class="bonus-tag">Bônus 3</span>
-    <h4>📚 +1500 Atividades Infantis Educativas</h4>
-    <p>Mega pacote de atividades para alfabetização, coordenação motora, lógica e muito mais.</p>
-    <div class="bonus-price"><s>De R$ 47</s> <strong>HOJE: GRÁTIS</strong></div>
-  </div>
-  <div class="bonus-card">
-    <span class="bonus-tag">Bônus 4</span>
-    <h4>🧠 Foco e Concentração no Autismo: 20 Estratégias Comprovadas</h4>
-    <p>Técnicas práticas para ajudar crianças autistas a manterem a atenção e lidarem melhor com momentos de crise.</p>
-    <div class="bonus-price"><s>De R$ 37</s> <strong>HOJE: GRÁTIS</strong></div>
-  </div>
-  <div class="bonus-card">
-    <span class="bonus-tag">Bônus 5</span>
-    <h4>✅ Guia Zero Comportamentos Críticos no Autismo</h4>
-    <p>Orientações claras para prevenir e lidar com comportamentos desafiadores no dia a dia da criança.</p>
-    <div class="bonus-price"><s>De R$ 47</s> <strong>HOJE: GRÁTIS</strong></div>
-  </div>
-  <div class="bonus-card">
-    <span class="bonus-tag">Bônus 6</span>
-    <h4>📘 Manual Prático do Autismo para Pais e Profissionais</h4>
-    <p>Entenda os principais sinais do TEA e saiba como estimular o desenvolvimento com mais segurança e empatia.</p>
-    <div class="bonus-price"><s>De R$ 57</s> <strong>HOJE: GRÁTIS</strong></div>
-  </div>
-
-  <div style="text-align:center; margin-top: 24px;">
-    <a href="#planos" class="cta-btn">QUERO MEU KIT AGORA →</a>
-    <div class="cta-sub">🔒 Pagamento seguro • Acesso imediato • Garantia 15 dias</div>
-  </div>
-</section>
-
-<!-- DEPOIMENTOS -->
+<!-- ════════════════════════════════════
+     BLOCO 06 — DEPOIMENTOS
+════════════════════════════════════ -->
 <section class="testimonials-section">
-  <span class="section-label">Resultados reais</span>
-  <h2 class="section-title">O que mães e profissionais <span>estão dizendo</span></h2>
+  <div class="testimonials-header">
+    <div class="section-label">Resultados reais</div>
+    <h2 class="section-title">O QUE MÃES ESTÃO<br><em>DIZENDO</em></h2>
+  </div>
 
-  <!-- CARROSSEL DE FOTOS -->
+  <!-- Carrossel de fotos -->
   <div class="photo-carousel-wrapper">
     <div class="photo-carousel-track" id="photoTrack">
-      <!-- Originais -->
       <div class="photo-slide"><img src="fotos/depoimentos/dep1.jpg" alt="Depoimento"></div>
       <div class="photo-slide"><img src="fotos/depoimentos/dep2.jpg" alt="Depoimento"></div>
       <div class="photo-slide"><img src="fotos/depoimentos/dep3.jpg" alt="Depoimento"></div>
       <div class="photo-slide"><img src="fotos/depoimentos/dep4.jpg" alt="Depoimento"></div>
-      <!-- Duplicados para loop infinito -->
       <div class="photo-slide"><img src="fotos/depoimentos/dep1.jpg" alt="Depoimento"></div>
       <div class="photo-slide"><img src="fotos/depoimentos/dep2.jpg" alt="Depoimento"></div>
       <div class="photo-slide"><img src="fotos/depoimentos/dep3.jpg" alt="Depoimento"></div>
@@ -1229,126 +1044,259 @@
     </div>
   </div>
 
-  <div style="text-align:center; margin-top: 20px;">
-    <a href="#planos" class="cta-btn">QUERO MEU KIT AGORA →</a>
-    <div class="cta-sub">🔒 Pagamento seguro • Acesso imediato • Garantia 15 dias</div>
+  <!-- Cards de texto (substituir pelos depoimentos reais) -->
+  <div class="testimonial-cards">
+    <!-- DEPOIMENTO 1: substitua pelo depoimento real -->
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"[Adicione aqui o depoimento real da mãe — algo que descreva a transformação que o kit trouxe para o filho dela.]"</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar" style="background: var(--petrol);">A</div>
+        <div>
+          <div class="testimonial-name">[Nome da mãe]</div>
+          <div class="testimonial-role">Mãe de criança com atraso de fala, X anos</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DEPOIMENTO 2 -->
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"[Adicione aqui o depoimento real — preferencialmente de outra mãe mostrando um resultado diferente do primeiro.]"</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar" style="background: var(--green-accent);">M</div>
+        <div>
+          <div class="testimonial-name">[Nome da mãe]</div>
+          <div class="testimonial-role">Mãe de criança com dificuldade de comunicação</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DEPOIMENTO 3 -->
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"[Terceiro depoimento real — pode ser de um pai ou cuidador para variar e ampliar identificação.]"</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar" style="background: var(--orange);">C</div>
+        <div>
+          <div class="testimonial-name">[Nome]</div>
+          <div class="testimonial-role">Mãe / Pai / Cuidador</div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ESCOLHA O PLANO -->
-<section class="plans-section" id="planos">
-  <h2 class="section-title" style="text-align:center;">Escolha a <span>Melhor Opção</span></h2>
 
-  <!-- KIT BÁSICO -->
-  <div class="plan-card">
-    <h3 class="plan-name">Kit Básico</h3>
-    <div class="plan-price">R$ <strong>10</strong><small>,00</small></div>
-    <div class="plan-payment">Pagamento único</div>
+<!-- CTA entre seções -->
+<div class="cta-block">
+  <a href="https://pay.wiapy.com/69e66e8191fb6aa98d0731b5" class="cta-btn">QUERO MEU KIT AGORA POR R$ 27 →</a>
+  <div class="cta-sub">📄 Arquivo digital — PDF pronto pra imprimir + editável no Canva<br>⚡ Acesso imediato por e-mail após o pagamento</div>
+</div>
 
-    <div class="plan-features">
-      <div class="plan-feature">✅ Tags de comunicação essenciais</div>
-      <div class="plan-feature">✅ Frases do dia a dia</div>
-      <div class="plan-feature">✅ Algumas atividades de apoio</div>
-      <div class="plan-feature">✅ Arquivo digital em PDF</div>
-      <div class="plan-feature">✅ Acesso imediato</div>
-    </div>
 
-    <a href="https://pay.wiapy.com/69e66f0591fb6aa98d075991" class="plan-btn plan-btn-basic">QUERO O KIT BÁSICO</a>
+<!-- ════════════════════════════════════
+     BLOCO 07 — O QUE VEM DENTRO
+════════════════════════════════════ -->
+<section class="contents-section" id="kit">
+  <div class="contents-badge">⚡ ACESSO IMEDIATO APÓS A COMPRA</div>
+  <h2 class="section-title">TUDO O QUE VOCÊ<br>VAI <em>RECEBER</em></h2>
+  <p class="section-sub">Um kit completo de comunicação alternativa e rotina visual</p>
 
-    <div class="plan-trust">🔒 Compra Segura &nbsp;•&nbsp; 🛡️ Garantia 15 dias &nbsp;•&nbsp; ⚡ Acesso Imediato</div>
+  <!-- Kit mockup: substitua pelo mockup real -->
+  <img src="fotos/hero.png" alt="Kit Comunicação e Rotina Visual" class="kit-img"
+       onerror="this.style.display='none'">
+
+  <ul class="contents-list">
+    <li><div class="check-circle">✓</div>+1500 materiais de comunicação alternativa (CAA)</li>
+    <li><div class="check-circle">✓</div>Todas as tags de comunicação — versão menino e menina</li>
+    <li><div class="check-circle">✓</div>Pranchas de comunicação alternativa completas</li>
+    <li><div class="check-circle">✓</div>Rotina visual completa — diária, semanal, escolar e noturna</li>
+    <li><div class="check-circle">✓</div>Atividades educativas adaptadas</li>
+    <li><div class="check-circle">✓</div>Jogos pedagógicos</li>
+    <li><div class="check-circle">✓</div>Livro de associação</li>
+    <li><div class="check-circle">✓</div>Material de alfabetização</li>
+    <li><div class="check-circle">✓</div>Guia prático com ideias de como usar em casa</li>
+    <li><div class="check-circle">✓</div>Tudo em PDF pronto pra imprimir + editável no Canva</li>
+  </ul>
+</section>
+
+
+<!-- ════════════════════════════════════
+     BLOCO 08 — BÔNUS
+════════════════════════════════════ -->
+<section class="bonus-section">
+  <div style="text-align:center; margin-bottom:24px;">
+    <div class="section-label">E não para por aí... tem mais!</div>
+    <h2 class="section-title">VOCÊ TAMBÉM LEVA<br><em>6 BÔNUS EXCLUSIVOS</em></h2>
+    <p class="section-sub" style="margin-top:8px;">Sem nenhum custo adicional, incluídos no kit</p>
+    <div class="bonus-badge" style="margin-top:12px;">🔥 6 BÔNUS EXCLUSIVOS INCLUÍDOS</div>
   </div>
 
-  <!-- KIT COMPLETO -->
-  <div class="plan-card plan-card-featured">
-    <div class="plan-badge">🛒 ⭐ MAIS RECOMENDADO</div>
-    <h3 class="plan-name">Kit Completo</h3>
-    <div class="plan-price">R$ <strong>27</strong><small>,00</small></div>
-    <div class="plan-payment">Pagamento único</div>
-
-    <div class="plan-features">
-      <div class="plan-feature">✅ Todas as tags de comunicação</div>
-      <div class="plan-feature">✅ Versão menino e menina</div>
-      <div class="plan-feature">✅ Pranchas de comunicação</div>
-      <div class="plan-feature">✅ Rotina visual completa</div>
-      <div class="plan-feature">✅ Atividades educativas adaptadas</div>
-      <div class="plan-feature">✅ Jogos pedagógicos</div>
-      <div class="plan-feature">✅ Livro de associação</div>
-      <div class="plan-feature">✅ Material de alfabetização</div>
-      <div class="plan-feature">✅ Guia com ideias práticas</div>
+  <div class="bonus-card">
+    <div class="bonus-num">1</div>
+    <div class="bonus-content">
+      <h4>🧩 30 Jogos Pedagógicos para Autismo</h4>
+      <p>Atividades lúdicas pensadas para estimular aprendizado, atenção e interação de forma divertida.</p>
+      <div class="bonus-price"><s>R$ 37,00</s> <strong>HOJE: GRÁTIS</strong></div>
     </div>
+  </div>
 
-    <div class="plan-bonus-box">
-      <div class="plan-bonus-title">🎁 + 6 BÔNUS EXCLUSIVOS INCLUÍDOS</div>
-      <div class="plan-bonus-item">🎁 30 Jogos Pedagógicos para Autismo</div>
-      <div class="plan-bonus-item">🎁 Kit Baralhos Terapêuticos</div>
-      <div class="plan-bonus-item">🎁 +1500 Atividades Infantis Educativas</div>
-      <div class="plan-bonus-item">🎁 Estratégias de Foco e Concentração</div>
-      <div class="plan-bonus-item">🎁 Guia Zero Comportamentos Críticos</div>
-      <div class="plan-bonus-item">🎁 Manual Prático do Autismo</div>
+  <div class="bonus-card">
+    <div class="bonus-num">2</div>
+    <div class="bonus-content">
+      <h4>🃏 Kit Baralhos Terapêuticos</h4>
+      <p>Cartas temáticas para trabalhar emoções, habilidades sociais e comunicação de forma lúdica.</p>
+      <div class="bonus-price"><s>R$ 27,00</s> <strong>HOJE: GRÁTIS</strong></div>
     </div>
+  </div>
 
-    <a href="https://pay.wiapy.com/69e66e8191fb6aa98d0731b5" class="plan-btn plan-btn-featured">QUERO O KIT COMPLETO</a>
+  <div class="bonus-card">
+    <div class="bonus-num">3</div>
+    <div class="bonus-content">
+      <h4>📚 +1500 Atividades Infantis Educativas</h4>
+      <p>Mega pacote de atividades para alfabetização, coordenação motora, lógica e muito mais.</p>
+      <div class="bonus-price"><s>R$ 47,00</s> <strong>HOJE: GRÁTIS</strong></div>
+    </div>
+  </div>
 
-    <div class="plan-trust">🔒 Compra Segura &nbsp;•&nbsp; 🛡️ Garantia 15 dias &nbsp;•&nbsp; ⚡ Acesso Imediato</div>
+  <div class="bonus-card">
+    <div class="bonus-num">4</div>
+    <div class="bonus-content">
+      <h4>🧠 Foco e Concentração — 20 Estratégias Comprovadas</h4>
+      <p>Técnicas práticas pra ajudar sua criança a manter a atenção e lidar melhor com momentos difíceis.</p>
+      <div class="bonus-price"><s>R$ 37,00</s> <strong>HOJE: GRÁTIS</strong></div>
+    </div>
+  </div>
+
+  <div class="bonus-card">
+    <div class="bonus-num">5</div>
+    <div class="bonus-content">
+      <h4>✅ Guia Zero Comportamentos Críticos</h4>
+      <p>Orientações claras para prevenir e lidar com comportamentos desafiadores no dia a dia.</p>
+      <div class="bonus-price"><s>R$ 47,00</s> <strong>HOJE: GRÁTIS</strong></div>
+    </div>
+  </div>
+
+  <div class="bonus-card">
+    <div class="bonus-num">6</div>
+    <div class="bonus-content">
+      <h4>📘 Manual Prático do Autismo para Pais e Cuidadores</h4>
+      <p>Entenda os principais sinais e saiba como estimular o desenvolvimento com mais segurança e empatia.</p>
+      <div class="bonus-price"><s>R$ 57,00</s> <strong>HOJE: GRÁTIS</strong></div>
+    </div>
   </div>
 </section>
 
-<!-- GARANTIA -->
-<section class="guarantee-section">
-  <div class="guarantee-box">
-    <div class="guarantee-icon">🛡️</div>
-    <h3>Garantia Incondicional de 15 Dias</h3>
-    <p>Se em 15 dias você sentir que o material não é pra você, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia. O risco é todo nosso.</p>
+
+<!-- ════════════════════════════════════
+     BLOCO 09 — OFERTA
+════════════════════════════════════ -->
+<section class="offer-section" id="planos">
+  <div style="text-align:center;">
+    <div class="offer-badge">⏳ PREÇO PROMOCIONAL POR TEMPO LIMITADO</div>
+    <h2>Sua criança pode começar a se comunicar<br><em>melhor ainda hoje.</em></h2>
+    <p>Por menos do que uma sessão de terapia, você leva tudo pra casa — 1500 materiais prontos, 6 bônus e acesso imediato — e começa agora.</p>
+  </div>
+
+  <div class="offer-card">
+    <div class="offer-card-title">Kit Completo</div>
+
+    <div class="offer-price">
+      <span class="currency">R$</span><span class="amount">27</span><span class="cents">,00</span>
+    </div>
+    <div class="offer-payment">Pagamento único • PDF digital</div>
+
+    <div class="offer-includes">
+      <div class="offer-includes-title">Você recebe tudo isso:</div>
+      <div class="offer-item">+1500 materiais de comunicação alternativa</div>
+      <div class="offer-item">Tags de comunicação versão menino e menina</div>
+      <div class="offer-item">Pranchas, rotina visual completa e atividades</div>
+      <div class="offer-item">Jogos pedagógicos + material de alfabetização</div>
+      <div class="offer-item">Guia prático com ideias de uso em casa</div>
+      <div class="offer-item">🎁 Bônus 1 — 30 Jogos Pedagógicos</div>
+      <div class="offer-item">🎁 Bônus 2 — Kit Baralhos Terapêuticos</div>
+      <div class="offer-item">🎁 Bônus 3 — +1500 Atividades Educativas</div>
+      <div class="offer-item">🎁 Bônus 4 — Estratégias de Foco e Concentração</div>
+      <div class="offer-item">🎁 Bônus 5 — Guia Zero Comportamentos Críticos</div>
+      <div class="offer-item">🎁 Bônus 6 — Manual Prático</div>
+    </div>
+
+    <a href="https://pay.wiapy.com/69e66e8191fb6aa98d0731b5" class="cta-btn cta-pulse">QUERO MEU KIT POR R$ 27 →</a>
+
+    <div class="offer-trust">🔒 Compra Segura &nbsp;•&nbsp; 🛡️ Garantia 15 dias &nbsp;•&nbsp; ⚡ Acesso Imediato</div>
+
+    <div class="guarantee-inline">
+      🛡️ <strong>Garantia incondicional de 15 dias.</strong> Se em 15 dias você sentir que o material não é pra você, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.
+    </div>
   </div>
 </section>
 
-<!-- FAQ -->
+
+<!-- ════════════════════════════════════
+     BLOCO 10 — FAQ
+════════════════════════════════════ -->
 <section class="faq-section">
-  <span class="section-label">Dúvidas frequentes</span>
-  <h2 class="section-title">Perguntas que mães e profissionais <span>sempre fazem</span></h2>
+  <div class="section-label">Dúvidas frequentes</div>
+  <h2 class="section-title" style="margin-bottom:24px;">PERGUNTAS<br><em>FREQUENTES</em></h2>
 
   <div class="faq-item">
-    <div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">Como recebo o material?</div>
-    <div class="faq-a">Imediatamente após o pagamento, você recebe acesso por email com o link para baixar todos os PDFs e acessar os templates no Canva. É tudo digital — sem esperar entrega.</div>
+    <div class="faq-q">Como recebo o material?</div>
+    <div class="faq-a">Imediatamente após o pagamento, você recebe um e-mail com o link para baixar todos os PDFs e acessar os templates no Canva. Tudo digital, sem esperar entrega.</div>
   </div>
+
   <div class="faq-item">
-    <div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">Preciso saber usar o Canva?</div>
-    <div class="faq-a">Não! Os materiais já vêm prontos em PDF pra imprimir direto. O Canva é opcional pra quem quiser personalizar — e o guia ensina o passo a passo.</div>
+    <div class="faq-q">Preciso saber usar o Canva?</div>
+    <div class="faq-a">Não. Os materiais já vêm prontos em PDF pra imprimir direto. O Canva é opcional, pra quem quiser personalizar com fotos e nome da criança — e o guia ensina o passo a passo.</div>
   </div>
+
   <div class="faq-item">
-    <div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">Funciona pra qualquer idade?</div>
-    <div class="faq-a">Sim. Os materiais são adaptáveis para crianças de 2 a 12 anos, e podem ser usados em casa, na escola ou na clínica.</div>
+    <div class="faq-q">Funciona sem acompanhamento profissional?</div>
+    <div class="faq-a">Sim. O kit foi pensado exatamente pra isso: ser usado pela mãe em casa, nos outros dias da semana, sem precisar de formação. Ele complementa a terapia — não substitui. Mas você não precisa de treinamento pra usar.</div>
   </div>
+
   <div class="faq-item">
-    <div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">Serve só pra autismo?</div>
-    <div class="faq-a">O kit foi pensado pra crianças com TEA, mas funciona muito bem para crianças com atraso na fala, TDAH, ou que se beneficiem de suporte visual na rotina.</div>
+    <div class="faq-q">Funciona pra qualquer idade?</div>
+    <div class="faq-a">O material foi pensado para crianças de 2 a 12 anos com atraso de fala ou dificuldades de comunicação. Pode ser usado em casa, na escola ou na clínica.</div>
   </div>
+
   <div class="faq-item">
-    <div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">E se eu não gostar?</div>
-    <div class="faq-a">Você tem 15 dias de garantia incondicional. Basta pedir o reembolso — devolvemos 100% sem perguntas.</div>
+    <div class="faq-q">Serve pra crianças sem diagnóstico fechado?</div>
+    <div class="faq-a">Sim. O kit é indicado pra qualquer criança com dificuldade de comunicação ou atraso de fala, independente de ter ou não diagnóstico. A comunicação alternativa beneficia qualquer criança que precise de suporte visual pra se expressar.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">E se eu não gostar?</div>
+    <div class="faq-a">Você tem 15 dias de garantia incondicional. Basta enviar um e-mail pedindo o reembolso — devolvemos 100% do valor sem nenhuma pergunta.</div>
   </div>
 </section>
 
-<!-- CTA FINAL -->
-<section class="final-cta">
-  <h2>A rotina da sua criança pode mudar hoje.</h2>
-  <p>Pare de improvisar. Tenha materiais prontos, bonitos e que funcionam de verdade.</p>
-  <a href="https://pay.wiapy.com/69e66e8191fb6aa98d0731b5" class="cta-btn">QUERO MEU KIT COMPLETO POR R$ 27 →</a>
-  <div class="trust-line">
-    <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-    Pagamento seguro • Acesso imediato • Garantia 15 dias
-  </div>
-</section>
 
-<!-- FOOTER -->
+<!-- ════════════════════════════════════
+     BLOCO 11 — FOOTER
+════════════════════════════════════ -->
 <footer>
-  <p>Kit Comunicação e Rotina Visual — Produto digital.</p>
-  <p>Este produto não substitui acompanhamento profissional (terapia, fonoaudiologia, psicologia).</p>
-  <p>Todos os direitos reservados © 2026</p>
+  <p>Kit Comunicação e Rotina Visual — Produto 100% digital.</p>
+  <p>Este produto não substitui acompanhamento profissional (fonoaudiologia, terapia ocupacional, psicologia).</p>
+  <p>© 2026 — Todos os direitos reservados.</p>
 </footer>
 
 
+<!-- ── FLOATING CTA ── -->
+<div class="floating-cta" id="floatingCta">
+  <a href="https://pay.wiapy.com/69e66e8191fb6aa98d0731b5">QUERO MEU KIT POR R$ 27 →</a>
+</div>
+
+
 <script>
+  // Data dinâmica na urgency bar
+  (function() {
+    const months = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+    const d = new Date();
+    const el = document.getElementById('urgencyDate');
+    if (el) el.textContent = d.getDate() + ' de ' + months[d.getMonth()] + ' de ' + d.getFullYear();
+  })();
+
   // Floating CTA
   const fc = document.getElementById('floatingCta');
   function onScroll() {
@@ -1358,17 +1306,17 @@
   window.addEventListener('scroll', onScroll, { passive: true });
 
   const obs = new MutationObserver(() => {
-    document.body.style.paddingBottom = fc.classList.contains('visible') ? '70px' : '0';
+    document.body.style.paddingBottom = fc.classList.contains('visible') ? '72px' : '0';
   });
   obs.observe(fc, { attributes: true, attributeFilter: ['class'] });
 
   // Carousel dots
   const track = document.getElementById('carouselTrack');
   const dots = document.querySelectorAll('.carousel-dot');
-  const S = 6;
+  const SLIDES = 6;
   function updateDots() {
     const m = new DOMMatrixReadOnly(getComputedStyle(track).transform);
-    const i = Math.floor(Math.abs(m.m41) / 254) % S;
+    const i = Math.floor(Math.abs(m.m41) / 254) % SLIDES;
     dots.forEach((d, j) => d.classList.toggle('active', j === i));
     requestAnimationFrame(updateDots);
   }
@@ -1377,22 +1325,29 @@
   track.addEventListener('touchstart', () => { track.style.animationPlayState = 'paused'; }, { passive: true });
   track.addEventListener('touchend', () => { setTimeout(() => { track.style.animationPlayState = 'running'; }, 2000); }, { passive: true });
 
-  // FAQ
+  // Photo carousel touch pause
+  const photoTrack = document.getElementById('photoTrack');
+  if (photoTrack) {
+    photoTrack.addEventListener('touchstart', () => { photoTrack.style.animationPlayState = 'paused'; }, { passive: true });
+    photoTrack.addEventListener('touchend', () => { setTimeout(() => { photoTrack.style.animationPlayState = 'running'; }, 2000); }, { passive: true });
+  }
+
+  // FAQ accordion
   document.querySelectorAll('.faq-q').forEach(q => {
     q.addEventListener('click', () => {
-      q.classList.toggle('open');
-      q.nextElementSibling.classList.toggle('open');
+      const isOpen = q.classList.contains('open');
+      document.querySelectorAll('.faq-q').forEach(x => { x.classList.remove('open'); x.nextElementSibling.classList.remove('open'); });
+      if (!isOpen) { q.classList.add('open'); q.nextElementSibling.classList.add('open'); }
     });
   });
 
-  // UTM passthrough — appenda parâmetros UTM da URL atual em todos os links de checkout
+  // UTM passthrough
   (function() {
     const utmKeys = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content'];
     const params = new URLSearchParams(window.location.search);
     const utmParams = new URLSearchParams();
     utmKeys.forEach(k => { if (params.has(k)) utmParams.set(k, params.get(k)); });
     if (!utmParams.toString()) return;
-
     const checkoutDomains = ['pay.wiapy.com'];
     document.querySelectorAll('a[href]').forEach(a => {
       try {
