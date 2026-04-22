@@ -847,7 +847,7 @@ footer {
 
 <!-- Urgência -->
 <div class="urgency-bar">
-  ⚡ OFERTA ESPECIAL — DISPONÍVEL APENAS HOJE, <span id="urgencyDate"></span>
+  ⚡ OFERTA VÁLIDA APENAS HOJE, <span id="urgencyDate"></span>
 </div>
 
 <!-- Hero -->
@@ -1196,7 +1196,6 @@ footer {
   <div style="text-align:center;">
     <div class="offer-badge">⏳ PREÇO PROMOCIONAL POR TEMPO LIMITADO</div>
     <h2>Sua criança pode começar a se comunicar<br><em>melhor ainda hoje.</em></h2>
-    <p>Por menos do que uma sessão de terapia, você leva tudo pra casa — 1500 materiais prontos, 6 bônus e acesso imediato — e começa agora.</p>
   </div>
 
   <div class="offer-card">
@@ -1282,12 +1281,6 @@ footer {
 </footer>
 
 
-<!-- ── FLOATING CTA ── -->
-<div class="floating-cta" id="floatingCta">
-  <a href="https://pay.wiapy.com/69e66e8191fb6aa98d0731b5">QUERO MEU KIT POR R$ 27 →</a>
-</div>
-
-
 <script>
   // Data dinâmica na urgency bar
   (function() {
@@ -1296,19 +1289,6 @@ footer {
     const el = document.getElementById('urgencyDate');
     if (el) el.textContent = d.getDate() + ' de ' + months[d.getMonth()] + ' de ' + d.getFullYear();
   })();
-
-  // Floating CTA
-  const fc = document.getElementById('floatingCta');
-  function onScroll() {
-    const hb = document.querySelector('.hero').getBoundingClientRect().bottom;
-    fc.classList.toggle('visible', hb < 0);
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
-
-  const obs = new MutationObserver(() => {
-    document.body.style.paddingBottom = fc.classList.contains('visible') ? '72px' : '0';
-  });
-  obs.observe(fc, { attributes: true, attributeFilter: ['class'] });
 
   // Carousel dots
   const track = document.getElementById('carouselTrack');
