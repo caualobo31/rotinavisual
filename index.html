@@ -132,10 +132,8 @@ a, button, [onclick] {
 .hero-img {
   width: 100%;
   max-width: 380px;
-  border-radius: var(--radius);
   margin: 0 auto 24px;
-  box-shadow: var(--shadow-md);
-  object-fit: cover;
+  filter: drop-shadow(0 12px 28px rgba(0,0,0,0.18));
 }
 
 .hero-img-placeholder {
@@ -537,10 +535,8 @@ a, button, [onclick] {
 .kit-img {
   width: 100%;
   max-width: 320px;
-  border-radius: var(--radius);
   margin: 0 auto 24px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-  object-fit: cover;
+  filter: drop-shadow(0 12px 28px rgba(0,0,0,0.25));
 }
 
 .contents-list { list-style: none; }
@@ -599,17 +595,11 @@ a, button, [onclick] {
   align-items: flex-start;
 }
 .bonus-num {
-  width: 36px; height: 36px;
+  width: 52px; height: 52px;
   border-radius: 10px;
-  background: var(--petrol-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Poppins', sans-serif;
-  font-size: 14px;
-  font-weight: 800;
-  color: var(--petrol);
+  overflow: hidden;
   flex-shrink: 0;
+  background: transparent;
 }
 .bonus-content h4 {
   font-family: 'Poppins', sans-serif;
@@ -857,8 +847,7 @@ footer {
   <h1>+1500 Materiais de Comunicação Alternativa e Rotina Visual Que <em>Estimulam a Fala</em> da Sua Criança Todos os Dias</h1>
 
   <!-- IMAGEM HERO: substitua pelo mockup real -->
-  <img src="fotos/hero.png" alt="Kit Comunicação e Rotina Visual" class="hero-img"
-       onerror="this.outerHTML='<div class=\'hero-img-placeholder\'><span style=\'font-size:36px\'>📦</span><span>Adicione seu mockup em fotos/hero.png</span></div>'">
+  <img src="fotos/mockup-p-principal.png" alt="Kit Comunicação e Rotina Visual" class="hero-img">
 
   <p class="hero-sub">+1500 materiais prontos de comunicação visual, rotina e atividades pra crianças com atraso de fala e dificuldades de comunicação. É só baixar, imprimir e usar hoje.</p>
 
@@ -956,7 +945,7 @@ footer {
     </div>
     <div class="benefit-card">
       <div class="benefit-icon">⚡</div>
-      <div class="benefit-title">Acesso digital imediato — use hoje mesmo</div>
+      <div class="benefit-title">Acesso digital imediato</div>
     </div>
   </div>
 </section>
@@ -1104,7 +1093,7 @@ footer {
   <p class="section-sub">Um kit completo de comunicação alternativa e rotina visual</p>
 
   <!-- Kit mockup: substitua pelo mockup real -->
-  <img src="fotos/mockup-p-principal.png" alt="Kit Comunicação e Rotina Visual" class="kit-img"
+  <img src="fotos/mockup-kit-caa.png" alt="Kit Comunicação e Rotina Visual" class="kit-img"
        onerror="this.style.display='none'">
 
   <ul class="contents-list">
@@ -1134,7 +1123,7 @@ footer {
   </div>
 
   <div class="bonus-card">
-    <div class="bonus-num">1</div>
+    <div class="bonus-num"><img src="fotos/bonus/bonus1.png" alt="Bônus 1" style="width:100%;height:100%;object-fit:contain;"></div>
     <div class="bonus-content">
       <h4>🧩 30 Jogos Pedagógicos para Autismo</h4>
       <p>Atividades lúdicas pensadas para estimular aprendizado, atenção e interação de forma divertida.</p>
@@ -1143,7 +1132,7 @@ footer {
   </div>
 
   <div class="bonus-card">
-    <div class="bonus-num">2</div>
+    <div class="bonus-num"><img src="fotos/bonus/bonus2.png" alt="Bônus 2" style="width:100%;height:100%;object-fit:contain;"></div>
     <div class="bonus-content">
       <h4>🃏 Kit Baralhos Terapêuticos</h4>
       <p>Cartas temáticas para trabalhar emoções, habilidades sociais e comunicação de forma lúdica.</p>
@@ -1152,16 +1141,7 @@ footer {
   </div>
 
   <div class="bonus-card">
-    <div class="bonus-num">3</div>
-    <div class="bonus-content">
-      <h4>📚 +1500 Atividades Infantis Educativas</h4>
-      <p>Mega pacote de atividades para alfabetização, coordenação motora, lógica e muito mais.</p>
-      <div class="bonus-price"><s>R$ 47,00</s> <strong>HOJE: GRÁTIS</strong></div>
-    </div>
-  </div>
-
-  <div class="bonus-card">
-    <div class="bonus-num">4</div>
+    <div class="bonus-num"><img src="fotos/bonus/bonus3.png" alt="Bônus 3" style="width:100%;height:100%;object-fit:contain;"></div>
     <div class="bonus-content">
       <h4>🧠 Foco e Concentração — 20 Estratégias Comprovadas</h4>
       <p>Técnicas práticas pra ajudar sua criança a manter a atenção e lidar melhor com momentos difíceis.</p>
@@ -1170,7 +1150,7 @@ footer {
   </div>
 
   <div class="bonus-card">
-    <div class="bonus-num">5</div>
+    <div class="bonus-num"><img src="fotos/bonus/bonus4.png" alt="Bônus 4" style="width:100%;height:100%;object-fit:contain;"></div>
     <div class="bonus-content">
       <h4>✅ Guia Zero Comportamentos Críticos</h4>
       <p>Orientações claras para prevenir e lidar com comportamentos desafiadores no dia a dia.</p>
@@ -1179,9 +1159,9 @@ footer {
   </div>
 
   <div class="bonus-card">
-    <div class="bonus-num">6</div>
+    <div class="bonus-num"><img src="fotos/bonus/bonus5.png" alt="Bônus 5" style="width:100%;height:100%;object-fit:contain;"></div>
     <div class="bonus-content">
-      <h4>📘 Manual Prático do Autismo para Pais e Cuidadores</h4>
+      <h4>📘 Manual Prático para Pais e Cuidadores</h4>
       <p>Entenda os principais sinais e saiba como estimular o desenvolvimento com mais segurança e empatia.</p>
       <div class="bonus-price"><s>R$ 57,00</s> <strong>HOJE: GRÁTIS</strong></div>
     </div>
@@ -1215,10 +1195,9 @@ footer {
       <div class="offer-item">Guia prático com ideias de uso em casa</div>
       <div class="offer-item">🎁 Bônus 1 — 30 Jogos Pedagógicos</div>
       <div class="offer-item">🎁 Bônus 2 — Kit Baralhos Terapêuticos</div>
-      <div class="offer-item">🎁 Bônus 3 — +1500 Atividades Educativas</div>
-      <div class="offer-item">🎁 Bônus 4 — Estratégias de Foco e Concentração</div>
-      <div class="offer-item">🎁 Bônus 5 — Guia Zero Comportamentos Críticos</div>
-      <div class="offer-item">🎁 Bônus 6 — Manual Prático</div>
+      <div class="offer-item">🎁 Bônus 3 — Estratégias de Foco e Concentração</div>
+      <div class="offer-item">🎁 Bônus 4 — Guia Zero Comportamentos Críticos</div>
+      <div class="offer-item">🎁 Bônus 5 — Manual Prático</div>
     </div>
 
     <a href="https://pay.wiapy.com/69e66e8191fb6aa98d0731b5" class="cta-btn cta-pulse">QUERO MEU KIT POR R$ 27 →</a>
