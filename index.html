@@ -25,6 +25,8 @@
 ></script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="fotos/mockup-p-principal.webp" as="image">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
@@ -134,24 +136,6 @@ a, button, [onclick] {
   max-width: 380px;
   margin: 0 auto 24px;
   filter: drop-shadow(0 12px 28px rgba(0,0,0,0.18));
-}
-
-.hero-img-placeholder {
-  width: 100%;
-  max-width: 380px;
-  height: 220px;
-  margin: 0 auto 24px;
-  background: var(--petrol-light);
-  border-radius: var(--radius);
-  border: 2px dashed var(--petrol);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  color: var(--petrol);
-  font-size: 13px;
-  font-weight: 700;
 }
 
 .cta-btn {
@@ -847,7 +831,7 @@ footer {
   <h1>+1500 Materiais de Comunicação Alternativa e Rotina Visual Que <em>Estimulam a Fala</em> da Sua Criança Todos os Dias</h1>
 
   <!-- IMAGEM HERO: substitua pelo mockup real -->
-  <img src="fotos/mockup-p-principal.webp" alt="Kit Comunicação e Rotina Visual" class="hero-img">
+  <img src="fotos/mockup-p-principal.webp" alt="Kit Comunicação e Rotina Visual" class="hero-img" fetchpriority="high" width="380" height="475">
 
   <p class="hero-sub">+1500 materiais prontos de comunicação visual, rotina e atividades pra crianças com atraso de fala e dificuldades de comunicação. É só baixar, imprimir e usar hoje.</p>
 
@@ -884,19 +868,19 @@ footer {
   <div class="carousel-wrapper">
     <div class="carousel-track" id="carouselTrack">
       <!-- Originais -->
-      <div class="carousel-slide"><img src="fotos/produtos/foto1.webp" alt="Material do Kit"></div>
-      <div class="carousel-slide"><img src="fotos/produtos/foto2.webp" alt="Material do Kit"></div>
-      <div class="carousel-slide"><img src="fotos/produtos/foto3.webp" alt="Material do Kit"></div>
-      <div class="carousel-slide"><img src="fotos/produtos/foto4.webp" alt="Material do Kit"></div>
-      <div class="carousel-slide"><img src="fotos/produtos/foto5.webp" alt="Material do Kit"></div>
-      <div class="carousel-slide"><img src="fotos/produtos/foto6.webp" alt="Material do Kit"></div>
+      <div class="carousel-slide"><img src="fotos/produtos/foto1.webp" alt="Material do Kit" loading="lazy"></div>
+      <div class="carousel-slide"><img src="fotos/produtos/foto2.webp" alt="Material do Kit" loading="lazy"></div>
+      <div class="carousel-slide"><img src="fotos/produtos/foto3.webp" alt="Material do Kit" loading="lazy"></div>
+      <div class="carousel-slide"><img src="fotos/produtos/foto4.webp" alt="Material do Kit" loading="lazy"></div>
+      <div class="carousel-slide"><img src="fotos/produtos/foto5.webp" alt="Material do Kit" loading="lazy"></div>
+      <div class="carousel-slide"><img src="fotos/produtos/foto6.webp" alt="Material do Kit" loading="lazy"></div>
       <!-- Duplicados para loop infinito -->
-      <div class="carousel-slide"><img src="fotos/produtos/foto1.webp" alt="Material do Kit"></div>
-      <div class="carousel-slide"><img src="fotos/produtos/foto2.webp" alt="Material do Kit"></div>
-      <div class="carousel-slide"><img src="fotos/produtos/foto3.webp" alt="Material do Kit"></div>
-      <div class="carousel-slide"><img src="fotos/produtos/foto4.webp" alt="Material do Kit"></div>
-      <div class="carousel-slide"><img src="fotos/produtos/foto5.webp" alt="Material do Kit"></div>
-      <div class="carousel-slide"><img src="fotos/produtos/foto6.webp" alt="Material do Kit"></div>
+      <div class="carousel-slide"><img src="fotos/produtos/foto1.webp" alt="Material do Kit" loading="lazy"></div>
+      <div class="carousel-slide"><img src="fotos/produtos/foto2.webp" alt="Material do Kit" loading="lazy"></div>
+      <div class="carousel-slide"><img src="fotos/produtos/foto3.webp" alt="Material do Kit" loading="lazy"></div>
+      <div class="carousel-slide"><img src="fotos/produtos/foto4.webp" alt="Material do Kit" loading="lazy"></div>
+      <div class="carousel-slide"><img src="fotos/produtos/foto5.webp" alt="Material do Kit" loading="lazy"></div>
+      <div class="carousel-slide"><img src="fotos/produtos/foto6.webp" alt="Material do Kit" loading="lazy"></div>
     </div>
 
     <div class="carousel-footer">
@@ -1022,14 +1006,14 @@ footer {
   <!-- Carrossel de fotos -->
   <div class="photo-carousel-wrapper">
     <div class="photo-carousel-track" id="photoTrack">
-      <div class="photo-slide"><img src="fotos/depoimentos/dep1.webp" alt="Depoimento"></div>
-      <div class="photo-slide"><img src="fotos/depoimentos/dep2.webp" alt="Depoimento"></div>
-      <div class="photo-slide"><img src="fotos/depoimentos/dep3.webp" alt="Depoimento"></div>
-      <div class="photo-slide"><img src="fotos/depoimentos/dep4.webp" alt="Depoimento"></div>
-      <div class="photo-slide"><img src="fotos/depoimentos/dep1.webp" alt="Depoimento"></div>
-      <div class="photo-slide"><img src="fotos/depoimentos/dep2.webp" alt="Depoimento"></div>
-      <div class="photo-slide"><img src="fotos/depoimentos/dep3.webp" alt="Depoimento"></div>
-      <div class="photo-slide"><img src="fotos/depoimentos/dep4.webp" alt="Depoimento"></div>
+      <div class="photo-slide"><img src="fotos/depoimentos/dep1.webp" alt="Depoimento" loading="lazy"></div>
+      <div class="photo-slide"><img src="fotos/depoimentos/dep2.webp" alt="Depoimento" loading="lazy"></div>
+      <div class="photo-slide"><img src="fotos/depoimentos/dep3.webp" alt="Depoimento" loading="lazy"></div>
+      <div class="photo-slide"><img src="fotos/depoimentos/dep4.webp" alt="Depoimento" loading="lazy"></div>
+      <div class="photo-slide"><img src="fotos/depoimentos/dep1.webp" alt="Depoimento" loading="lazy"></div>
+      <div class="photo-slide"><img src="fotos/depoimentos/dep2.webp" alt="Depoimento" loading="lazy"></div>
+      <div class="photo-slide"><img src="fotos/depoimentos/dep3.webp" alt="Depoimento" loading="lazy"></div>
+      <div class="photo-slide"><img src="fotos/depoimentos/dep4.webp" alt="Depoimento" loading="lazy"></div>
     </div>
   </div>
 
@@ -1053,7 +1037,7 @@ footer {
   <p class="section-sub">Um kit completo de comunicação alternativa e rotina visual</p>
 
   <!-- Kit mockup: substitua pelo mockup real -->
-  <img src="fotos/mockup-kit-caa.webp" alt="Kit Comunicação e Rotina Visual" class="kit-img"
+  <img src="fotos/mockup-kit-caa.webp" alt="Kit Comunicação e Rotina Visual" class="kit-img" loading="lazy"
        onerror="this.style.display='none'">
 
   <ul class="contents-list">
@@ -1083,7 +1067,7 @@ footer {
   </div>
 
   <div class="bonus-card">
-    <div class="bonus-num"><img src="fotos/bonus/bonus1.webp" alt="Bônus 1" style="width:100%;height:100%;object-fit:contain;"></div>
+    <div class="bonus-num"><img src="fotos/bonus/bonus1.webp" alt="Bônus 1" style="width:100%;height:100%;object-fit:contain;" loading="lazy"></div>
     <div class="bonus-content">
       <h4>🧩 30 Jogos Pedagógicos para Autismo</h4>
       <p>Atividades lúdicas pensadas para estimular aprendizado, atenção e interação de forma divertida.</p>
@@ -1092,7 +1076,7 @@ footer {
   </div>
 
   <div class="bonus-card">
-    <div class="bonus-num"><img src="fotos/bonus/bonus2.webp" alt="Bônus 2" style="width:100%;height:100%;object-fit:contain;"></div>
+    <div class="bonus-num"><img src="fotos/bonus/bonus2.webp" alt="Bônus 2" style="width:100%;height:100%;object-fit:contain;" loading="lazy"></div>
     <div class="bonus-content">
       <h4>🃏 Kit Baralhos Terapêuticos</h4>
       <p>Cartas temáticas para trabalhar emoções, habilidades sociais e comunicação de forma lúdica.</p>
@@ -1101,7 +1085,7 @@ footer {
   </div>
 
   <div class="bonus-card">
-    <div class="bonus-num"><img src="fotos/bonus/bonus3.webp" alt="Bônus 3" style="width:100%;height:100%;object-fit:contain;"></div>
+    <div class="bonus-num"><img src="fotos/bonus/bonus3.webp" alt="Bônus 3" style="width:100%;height:100%;object-fit:contain;" loading="lazy"></div>
     <div class="bonus-content">
       <h4>🧠 Foco e Concentração — 20 Estratégias Comprovadas</h4>
       <p>Técnicas práticas pra ajudar sua criança a manter a atenção e lidar melhor com momentos difíceis.</p>
@@ -1110,7 +1094,7 @@ footer {
   </div>
 
   <div class="bonus-card">
-    <div class="bonus-num"><img src="fotos/bonus/bonus4.webp" alt="Bônus 4" style="width:100%;height:100%;object-fit:contain;"></div>
+    <div class="bonus-num"><img src="fotos/bonus/bonus4.webp" alt="Bônus 4" style="width:100%;height:100%;object-fit:contain;" loading="lazy"></div>
     <div class="bonus-content">
       <h4>✅ Guia Zero Comportamentos Críticos</h4>
       <p>Orientações claras para prevenir e lidar com comportamentos desafiadores no dia a dia.</p>
@@ -1119,7 +1103,7 @@ footer {
   </div>
 
   <div class="bonus-card">
-    <div class="bonus-num"><img src="fotos/bonus/bonus5.webp" alt="Bônus 5" style="width:100%;height:100%;object-fit:contain;"></div>
+    <div class="bonus-num"><img src="fotos/bonus/bonus5.webp" alt="Bônus 5" style="width:100%;height:100%;object-fit:contain;" loading="lazy"></div>
     <div class="bonus-content">
       <h4>📘 Manual Prático para Pais e Cuidadores</h4>
       <p>Entenda os principais sinais e saiba como estimular o desenvolvimento com mais segurança e empatia.</p>
@@ -1243,13 +1227,11 @@ footer {
   const track = document.getElementById('carouselTrack');
   const dots = document.querySelectorAll('.carousel-dot');
   const SLIDES = 6;
-  function updateDots() {
+  setInterval(function() {
     const m = new DOMMatrixReadOnly(getComputedStyle(track).transform);
     const i = Math.floor(Math.abs(m.m41) / 254) % SLIDES;
     dots.forEach((d, j) => d.classList.toggle('active', j === i));
-    requestAnimationFrame(updateDots);
-  }
-  requestAnimationFrame(updateDots);
+  }, 300);
 
   track.addEventListener('touchstart', () => { track.style.animationPlayState = 'paused'; }, { passive: true });
   track.addEventListener('touchend', () => { setTimeout(() => { track.style.animationPlayState = 'running'; }, 2000); }, { passive: true });
